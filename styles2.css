@@ -1,0 +1,386 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: space grotesk, sans-serif;
+}
+html {
+    font-size:18px;
+    height:100vh;
+    width:100vw;
+    /* border:10px solid orange; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+body {
+    height:100%;
+    width:100%;
+    margin:0;
+    /* margin:10px; */
+    /* padding:10px; */
+    /* border:1px solid red; */
+    background-image:url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size:30% 100%;
+    
+    /* display:flex;
+    justify-content:center;
+    align-items:center; */
+    /* border:1px solid blue; */
+}
+main {
+    /* margin:10px;
+    padding:10px; */
+    height:100%;
+    width:100%;
+    /* border:1px solid green; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container {
+    
+    /* height:100%; */
+    width:100%;
+    /* margin:auto; */
+    max-width:1045px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    /* border:1px solid red; */
+}
+
+/* ---- CARD BLOCK ---- */
+/* ---- CARD BLOCK ---- */
+.block1{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    margin:1rem;
+}
+/* ---- CARD FRONT ---- */
+/* ---- CARD FRONT ---- */
+
+.front {
+    background-image: url(./images/bg-card-front.png);
+    background-size: cover;
+    width:447px;
+    height:245px;
+    padding:1.5rem;
+    margin-right:100px;
+    color:white;
+    /* position:relative; */
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.front img {
+    width:min-content;
+    
+}
+.front h2{
+    letter-spacing:0.15rem;
+    text-transform: uppercase;
+    display:block;
+    /* border:1px solid red; */
+    margin-top:60px;
+}
+.front span{
+    display:flex;
+    justify-content:space-between;
+    /* border:1px solid red; */
+    bottom:0;
+}
+.front p{
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin:0;
+    padding: 0;
+    display:inline-block;
+}
+
+/* ---- CARD BACK ---- */
+/* ---- CARD BACK ---- */
+
+.back {
+    background-image: url(./images/bg-card-back.png);
+    background-size: cover;
+    width:447px;
+    height:245px;
+    margin-left:100px;
+    color:white;
+    position:relative;
+}
+.back p {
+    font-size:14px;
+    position:absolute;
+    right:15%;
+    top:40%;
+}
+/* ---- FORM ARRANGEMENT ---- */
+/* ---- FORM ARRANGEMENT ---- */
+form {
+    width:350px;
+    min-width:280px;
+    /* border:1px solid red; */
+    height:320px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:space-between;
+    gap:0.5rem;
+    margin:1rem;
+    position:relative;
+    /* display:none; */
+    /* visibility: hidden; */
+}
+
+
+
+.dateAndCvc {
+    display:flex;
+    justify-content:flex-end;
+    gap:0.5rem;
+    /* border:1px solid purple; */
+
+}
+/* ------------------------------------ */
+.dateAndCvc label{
+    /* border:1px solid blue; */
+    /* max-width:50%; */
+    margin:0;
+}
+label[for="date"] {
+    flex-shrink:5;
+    max-width:calc(50% - 0.5rem);
+    position:relative;
+    /* border:1px solid green; */
+    z-index:0;
+    padding:0;
+}
+
+label[for="date"] div:first-child{
+    width:calc(50% - 6px);
+    display:inline-flex;
+    flex-direction:column;
+    /* border:1px solid orange; */
+}
+label[for="date"] div:nth-of-type(2) {
+    width:50%;
+    display:inline-flex;
+    flex-direction:column;
+    /* border:1px solid orange; */
+    }
+   
+   label[for="cvc"] {
+    flex-shrink:0;
+    max-width:50%;
+}
+/* ------------------------------------ */
+
+label {
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+input {
+    font-size:18px;
+    margin-top:5px;
+    padding:0.5rem;
+    border-radius:5px;
+    border:none;
+    border:1px solid hsl(270, 3%, 87%);
+}
+.full, [type="submit"]{
+    width:100%;
+}
+[type="submit"]{
+    background-color:hsl(278, 68%, 11%);
+    color:white;
+    font-size:16px;
+    height:50px;
+}
+[type="submit"]:hover {
+    cursor:pointer;
+    background-color:hsl(278, 52%, 24%);
+    
+}
+
+/* ---- COMPLETED STATE ---- */
+/* ---- COMPLETED STATE ---- */
+
+.complete {
+    width:100%;
+    min-width:280px;
+    height:320px;
+    /* border:1px solid red; */
+    background-color:white;
+    
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    gap:0.5rem;
+    visibility:hidden;
+    z-index:1;
+    /* margin:1rem; */
+    /* display:none; */
+}
+.complete img{
+    width:60px;
+}
+.complete h2 {
+    font-weight:400;
+    letter-spacing:3px;
+    margin-bottom:-10px;
+}
+.complete p {
+    font-size:16px;
+    font-weight:500;
+    color:hsl(279, 6%, 55%);
+}
+    .complete button{
+        border-radius:5px;
+        background-color:hsl(278, 68%, 11%);
+        color:white;
+        font-size:16px;
+        height:50px;
+        border:none;
+        width:100%;
+        margin-top:1rem;
+    }
+    .complete button:hover {
+        cursor:pointer;
+        background-color:hsl(278, 52%, 24%);
+    }
+
+    .visible {
+        visibility: visible;
+    }
+/* ---- ERROR STATES ---- */
+/* ---- ERROR STATES ---- */
+
+.errorMSG {
+    text-transform:initial;
+    color:hsl(0, 100%, 66%);
+    font-size:14px;
+    font-weight:500;
+    margin-top:5px;
+    display:none;
+    
+    /* overflow: hidden; */
+    text-wrap:wrap;
+}
+
+
+.error {
+    border-color: hsl(0, 100%, 66%);
+    display:inline-block;
+    text-wrap:wrap;
+    word-wrap:break-word;
+    line-height:12px;
+}
+
+/* - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%) */
+
+/* ---- MOBILE SCREENS ---- */
+/* ---- MOBILE SCREENS ---- */
+
+@media (max-width:430px) {
+    
+
+body {
+        height:100%;
+        width:100%;
+        margin:0;
+        background-image:none;
+        /* background-repeat: no-repeat; */
+        /* background-size:cover; */
+    }
+
+ .container{
+    max-width:430px;
+    /* max-height:700px; */
+    align-self:flex-start;
+    /* border:1px solid red; */
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:3.5rem;
+    
+ }   
+
+ .block1 { 
+    margin-top:0;
+    max-height:240px;
+    min-width:320px;
+    width:100%;
+    max-width:430px;
+    aspect-ratio:375/240;
+    /* flex-direction:column; */
+    /* justify-content:flex-end; */
+    /* align-items:center; */
+    /* border:2px solid blue; */
+    /* flex-shrink:3; */
+    /* flex-grow:1; */
+    padding:0;
+    gap:0;
+    background-image:url(./images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size:430px 240px;
+        overflow:visible;
+    position:relative;
+ }
+ 
+ .front, .back {
+    transform-origin:0 100%;
+    transform:scale(60%);
+    margin:0;
+    /* border:1px solid lime; */
+    position:absolute;
+ }
+
+ .front {
+    bottom:-40px;;
+    left:1rem;
+    z-index:1;
+ }
+ .back {
+    transform-origin:100% 0;
+    bottom:-55px;
+    right:1rem;
+    z-index:0;
+ }
+ 
+ form {
+    width:fit-content;
+    min-width:280px;
+    /* border:1px solid red; */
+    height:320px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:space-between;
+    gap:0.5rem;
+    margin:1rem;
+    position:relative;
+    /* display:none; */
+    /* visibility: hidden; */
+}
+ 
+
+
+
+
+}
